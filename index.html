@@ -1,137 +1,145 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Angel Store</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Angel Store</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f5fbff;
+  color:#333;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #f5fbff;
-      color: #333;
-    }
+header{
+  background:#a9dcf5;
+  text-align:center;
+  padding:20px;
+}
 
-    header {
-      background: #a9dcf5;
-      padding: 20px;
-      text-align: center;
-    }
+.logo{
+  width:120px;
+  height:120px;
+  object-fit:contain;
+  border-radius:50%;
+  background:white;
+}
 
-    header img {IMG_20261003_013720_177.jpg}
-      width: 120px;
-      height: 120px;
-      object-fit: contain;
-      border-radius: 50%;
-      background: white;
-    }
+header h1{
+  color:white;
+  margin:10px 0 0;
+}
 
-    h1 {
-      margin-top: 10px;
-      color: white;
-    }
+.hero{
+  text-align:center;
+  padding:25px 15px;
+}
 
-    .hero {
-      text-align: center;
-      padding: 30px 15px;
-    }
+.hero h2{
+  color:#65b9df;
+}
 
-    .hero h2 {
-      color: #65b9df;
-      margin-bottom: 10px;
-    }
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  padding:20px;
+  max-width:1000px;
+  margin:auto;
+}
 
-    .hero p {
-      color: #666;
-    }
+.product{
+  background:white;
+  border-radius:18px;
+  padding:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  text-align:center;
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+.photos{
+  display:flex;
+  gap:8px;
+  overflow-x:auto;
+}
 
-    .product {
-      background: white;
-      border-radius: 18px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
+.photos img{
+  width:180px;
+  height:200px;
+  object-fit:cover;
+  border-radius:14px;
+  flex-shrink:0;
+}
 
-    .product img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 14px;
-    }
+.product h3{
+  margin:12px 0 8px;
+}
 
-    .product h3 {
-      margin: 12px 0 6px;
-      color: #555;
-    }
+.price{
+  color:#55add6;
+  font-weight:bold;
+  font-size:18px;
+}
 
-    .price {
-      color: #5bb4dc;
-      font-weight: bold;
-      font-size: 18px;
-    }
+.order{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 20px;
+  background:#8fd1ed;
+  color:white;
+  text-decoration:none;
+  border-radius:20px;
+}
 
-    .order {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 18px;
-      background: #8fd1ed;
-      color: white;
-      text-decoration: none;
-      border-radius: 20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 25px;
-      margin-top: 20px;
-      background: #a9dcf5;
-      color: white;
-    }
-  </style>
+footer{
+  margin-top:30px;
+  padding:25px;
+  text-align:center;
+  background:#a9dcf5;
+  color:white;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <img src="file_00000000942082108f850558b43d7ae7.png" alt="Angel Store">
-    <h1>Angel Store</h1>
-  </header>
+<header>
+  <img class="logo" src="file_00000000942082108f850558b43d7ae7.png">
+  <h1>Angel Store</h1>
+</header>
 
-  <section class="hero">
-    <h2>إكسسوارات تضيف لمستك ✨</h2>
-    <p>اختاري إكسسواراتك المفضلة من Angel Store</p>
-  </section>
+<section class="hero">
+  <h2>إكسسوارات تضيف لمستك ✨</h2>
+  <p>اختاري إكسسواراتك المفضلة</p>
+</section>
 
-  <section class="products">
+<section class="products">
 
-    <div class="product">
-      <img src="IMG_20261003_013720_177.jpg" alt="منتج Angel Store">
-      <h3>إكسسوار Angel Store</h3>
-      <div class="price">5000</div>
-      <a class="order" href="#">طلب المنتج</a>
+  <!-- المنتج الأول -->
+  <div class="product">
+
+    <div class="photos">
+      <img src="IMG_20261003_013720_177.jpg">
     </div>
 
-  </section>
+    <h3>إكسسوار Angel Store</h3>
 
-  <footer>
-    Angel Store ✨
-  </footer>
+    <div class="price">
+      10,000 دينار
+    </div>
+
+    <a class="order" href="#">
+      طلب المنتج
+    </a>
+
+  </div>
+
+</section>
+
+<footer>
+  Angel Store ✨
+</footer>
 
 </body>
 </html>
