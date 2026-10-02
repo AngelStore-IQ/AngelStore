@@ -1,153 +1,137 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Angel Store</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angel Store</title>
 
-<style>
-*{box-sizing:border-box}
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f7fbff;
-color:#263746;
-}
-header{
-background:linear-gradient(135deg,#dff3ff,#fff);
-padding:35px 20px;
-text-align:center;
-}
-.logo{
-font-size:55px;
-}
-h1{
-margin:10px 0;
-color:#398ac4;
-font-size:38px;
-}
-header p{
-font-size:18px;
-color:#667;
-}
-nav{
-background:white;
-padding:15px;
-text-align:center;
-box-shadow:0 2px 10px #00000010;
-position:sticky;
-top:0;
-z-index:5;
-}
-nav a{
-text-decoration:none;
-color:#398ac4;
-margin:0 10px;
-font-weight:bold;
-}
-section{
-padding:35px 18px;
-max-width:1100px;
-margin:auto;
-}
-.title{
-text-align:center;
-color:#398ac4;
-margin-bottom:25px;
-}
-.categories{
-display:flex;
-gap:12px;
-justify-content:center;
-flex-wrap:wrap;
-}
-.category{
-background:white;
-padding:18px 25px;
-border-radius:18px;
-box-shadow:0 3px 12px #00000012;
-font-weight:bold;
-}
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-}
-.card{
-background:white;
-border-radius:22px;
-padding:20px;
-text-align:center;
-box-shadow:0 4px 15px #00000012;
-}
-.pic{
-height:150px;
-background:#e9f6ff;
-border-radius:18px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:65px;
-}
-.card h3{
-margin:15px 0 8px;
-}
-.price{
-color:#398ac4;
-font-size:20px;
-font-weight:bold;
-margin-bottom:15px;
-}
-button{
-border:0;
-background:#398ac4;
-color:white;
-padding:12px 22px;
-border-radius:25px;
-font-size:16px;
-cursor:pointer;
-}
-.contact{
-text-align:center;
-background:#e8f6ff;
-border-radius:25px;
-}
-.contact a{
-display:inline-block;
-margin:8px;
-padding:13px 22px;
-border-radius:25px;
-background:white;
-color:#398ac4;
-text-decoration:none;
-font-weight:bold;
-}
-footer{
-text-align:center;
-padding:25px;
-background:#dff3ff;
-color:#667;
-}
-</style>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5fbff;
+      color: #333;
+    }
+
+    header {
+      background: #a9dcf5;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: white;
+    }
+
+    h1 {
+      margin-top: 10px;
+      color: white;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    .hero h2 {
+      color: #65b9df;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #666;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .product {
+      background: white;
+      border-radius: 18px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+
+    .product img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    .product h3 {
+      margin: 12px 0 6px;
+      color: #555;
+    }
+
+    .price {
+      color: #5bb4dc;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .order {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 10px 18px;
+      background: #8fd1ed;
+      color: white;
+      text-decoration: none;
+      border-radius: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 20px;
+      background: #a9dcf5;
+      color: white;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<div class="logo">
-<img src="file_00000000942082108f850558b43d7ae7.png" alt="Angel Store">
-</div>
-<h1>Angel Store</h1>
-<p>إكسسوارات تضيف لمستك ✨</p>
-</header>
+  <header>
+    <img src="file_00000000942082108f850558b43d7ae7.png" alt="Angel Store">
+    <h1>Angel Store</h1>
+  </header>
 
-<nav>
-<a href="#home">الرئيسية</a>
-<a href="#categories">الأقسام</a>
-<a href="#products">المنتجات</a>
-<a href="#contact">تواصل معنا</a>
-</nav>
+  <section class="hero">
+    <h2>إكسسوارات تضيف لمستك ✨</h2>
+    <p>اختاري إكسسواراتك المفضلة من Angel Store</p>
+  </section>
 
-<section id="home">
-<h2 class="title">أهلاً بكم في Angel Store 🤍</h2>
-<img src="IMG_20261003_013720_177.jpg"
+  <section class="products">
+
+    <div class="product">
+      <img src="IMG_20261003_013720_177.jpg" alt="منتج Angel Store">
+      <h3>إكسسوار Angel Store</h3>
+      <div class="price">السعر: يحدد لاحقاً</div>
+      <a class="order" href="#">طلب المنتج</a>
+    </div>
+
+  </section>
+
+  <footer>
+    Angel Store ✨
+  </footer>
+
+</body>
+</html>
